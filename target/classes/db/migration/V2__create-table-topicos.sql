@@ -1,0 +1,11 @@
+CREATE TABLE topicos (
+    id BIGINT NOT NULL GENERATED ALWAYS AS IDENTITY,
+    titulo VARCHAR(200) NOT NULL,
+    mensaje VARCHAR(1000) NOT NULL,
+    fecha TIMESTAMP NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    autor VARCHAR(100) NOT NULL,
+    curso VARCHAR(100) NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE (titulo, mensaje)
+);
